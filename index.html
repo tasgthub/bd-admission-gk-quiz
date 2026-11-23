@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>বিশ্ববিদ্যালয় ভর্তি প্রস্তুতি — সাধারণ জ্ঞান কুইজ (২০ সেট)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <div>
+        <span class="badge">B Unit • Admission GK</span>
+        <h1>সাধারণ জ্ঞান মডেল টেস্ট (২০ সেট • ৬০০ প্রশ্ন)</h1>
+        <p class="subtitle">বাংলাদেশ বিষয়াবলি (১০ সেট) ও আন্তর্জাতিক বিষয়াবলি (১০ সেট) — যাচাইকৃত উত্তরপত্রসহ</p>
+      </div>
+      <div class="header-actions">
+        <button id="toggleAnswersBtn" class="btn btn-primary" type="button">সঠিক উত্তর হাইলাইট: চালু</button>
+        <button id="toggleFlaggedBtn" class="btn btn-outline" type="button">শুধু যাচাই/ফ্ল্যাগকৃত প্রশ্ন</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls-card">
+      <div class="control-group">
+        <label for="categorySelect">বিষয় নির্বাচন করুন</label>
+        <select id="categorySelect">
+          <option value="all">সকল বিষয় (২০ সেট)</option>
+          <option value="bangladesh">বাংলাদেশ বিষয়াবলি (সেট ১–১০)</option>
+          <option value="international">আন্তর্জাতিক বিষয়াবলি (সেট ১–১০)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="setSelect">মডেল টেস্ট নির্বাচন করুন</label>
+        <select id="setSelect"></select>
+      </div>
+
+      <div class="control-group search-group">
+        <label for="searchInput">প্রশ্ন খুঁজুন (বাংলায় লিখুন)</label>
+        <input id="searchInput" type="search" placeholder="যেমন: মহাস্থানগড়, জাতিসংঘ, পদ্মা সেতু, ইউনেস্কো..." />
+      </div>
+
+      <div class="control-group mode-group">
+        <label>অনুশীলন মোড</label>
+        <div class="mode-pills">
+          <button id="studyModeBtn" class="pill active" type="button">উত্তরসহ পড়ুন</button>
+          <button id="quizModeBtn" class="pill" type="button">নিজে পরীক্ষা দিন</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-bar" id="statsBar">
+      <div class="stat-item"><strong id="totalCount">0</strong><span>প্রদর্শিত প্রশ্ন</span></div>
+      <div class="stat-item"><strong id="flaggedCount">0</strong><span>সতর্কতা/যাচাই নোট</span></div>
+      <div class="stat-item"><strong id="scoreDisplay">—</strong><span>আপনার স্কোর</span></div>
+      <button id="resetQuizBtn" class="btn btn-small" type="button">রিসেট</button>
+    </section>
+
+    <section id="questionsContainer" class="questions-grid"></section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <p>উৎস: B Unit Final Model Test PDF (৪০ পৃষ্ঠা) • ঐতিহাসিক, সাংবিধানিক ও আন্তর্জাতিক তথ্য যাচাইকৃত।</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
